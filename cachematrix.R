@@ -1,15 +1,9 @@
 makeCacheMatrix <- function(x = matrix()) {
-  ## @x: It is an invertible matrix
-  ## return: a list containing functions to
-  ##              1. set the matrix
-  ##              2. get the matrix
-  ##              3. set the inverse
-  ##              4. get the inverse
-  ##         this list is used as the input to cacheSolve()
+
   
   inv = NULL
   set = function(y) {
-    # use `<<-` to assign a value to an object in an environment 
+
     x <<- y
     inv <<- NULL
   }
@@ -21,8 +15,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 cacheSolve <- function(x, ...) {
-  ## @x: output of makeCacheMatrix()
-  ## return: inverse of the original matrix input to makeCacheMatrix()
   
   inv = x$getinv()
   
